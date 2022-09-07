@@ -1,0 +1,150 @@
+.container{
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.square1{
+    display: flex;
+    height: 250px;
+    width: 250px;
+    background: linear-gradient(red,blue);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+.circle1{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    border-radius: 50%;
+    align-self: flex-start;
+    margin: -100px;
+    
+
+}
+.circle2{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    border-radius: 50%;
+    align-self: flex-end;
+    margin: -100px;
+    
+
+}
+.emoji{
+    align-self: center;
+    font-size: 50px;
+
+}
+
+.square2{
+    height: 50px;
+    width: 25px;
+    background-color: white;
+    align-self:flex-start;
+    border-radius: 0px 10px 0px 0px;
+}
+.square3{
+    height: 50px;
+    width: 25px;
+    background-color: white;
+    align-self:flex-end;
+    border-radius: 0px 0px 0px 10px;
+}
+.ring1{
+    position: relative;
+    width: 60vh;
+    height:60vh;
+    background: linear-gradient(red,blue);
+    border-radius: 50%;
+    animation: animate 0.5s linear infinite;
+}
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.ring1::after{
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    bottom: 35px;
+    left: 35px;
+    border-radius: 50%;
+    background-color: black;
+}
+.ring1 span{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: linear-gradient(red,blue);
+    border-radius: 50%;
+}
+.ring1 span:nth-child(1){
+    filter: blur(5px);
+}
+.ring1 span:nth-child(2){
+    filter: blur(10px);
+}
+.ring1 span:nth-child(3){
+    filter: blur(20px);
+}
+.ring1 span:nth-child(4){
+    filter: blur(55px);
+}
+.ring2{
+    position: relative;
+    width: 60vh;
+    height:60vh;
+    background: linear-gradient(red,blue);
+    border-radius: 50%;
+    animation: animate1 0.5s linear infinite;
+}
+.ring2::after{
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    bottom: 35px;
+    left: 35px;
+    border-radius: 50%;
+    background-color: black;
+    
+}
+.ring2 span{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: linear-gradient(red,blue);
+    border-radius: 50%;
+}
+.ring2 span:nth-child(1){
+    filter: blur(5px);
+}
+.ring2 span:nth-child(2){
+    filter: blur(10px);
+}
+.ring2 span:nth-child(3){
+    filter: blur(20px);
+}
+.ring2 span:nth-child(4){
+    filter: blur(55px);
+}
+@keyframes animate1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
